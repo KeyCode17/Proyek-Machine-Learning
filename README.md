@@ -178,24 +178,26 @@ Dari analisis yang dilakukan, beberapa temuan penting adalah:
 ## Data Preparation
 Data preparation adalah tahap krusial dalam pembuatan model Machine Learning karena kualitas data secara langsung mempengaruhi performa model. Berikut adalah tahapan yang dilakukan untuk mempersiapkan data:
 
-### Deskripsi Tahapan
-1. **Splitting Data**: Data dibagi menjadi dua set, yaitu training set dan testing set. Proporsi pembagian adalah 80% untuk training dan 20% untuk testing. Splitting ini penting untuk memvalidasi model pada data yang tidak terlibat dalam proses training, yang membantu dalam menilai kemampuan generalisasi model.
+### Deskripsi Tahapan 
 
-2. **Handling Missing Values**:
+1. **Handling Missing Values**:
     - Nilai yang hilang diimputasi berdasarkan tipe data masing-masing kolom. Untuk variabel numerik, digunakan nilai rata-rata (mean), dan untuk variabel kategorikal, digunakan modus (mode).
     - Alasan: Mengimputasi nilai hilang mencegah model dari bias yang bisa terjadi jika baris atau kolom yang mengandung nilai hilang dihapus secara keseluruhan, memungkinkan pemanfaatan data maksimal tanpa kehilangan informasi penting.
 
-3. **Encoding Kategorikal**:
+2. **Encoding Kategorikal**:
     - Variabel kategorikal diubah menjadi numerik menggunakan teknik One-Hot Encoding.
     - Alasan: Kebanyakan algoritma machine learning tidak dapat memproses label teks langsung, sehingga perlu mengubahnya menjadi format numerik. One-Hot Encoding memungkinkan model untuk menginterpretasikan fitur kategorikal tanpa mengasumsikan urutan dalam data.
 
-4. **Feature Scaling**:
+3. **Feature Scaling**:
     - Fitur numerik dinormalisasi menggunakan skala standar (standard scaling) sehingga semua fitur memiliki rata-rata nol dan standar deviasi satu.
     - Alasan: Normalisasi memastikan bahwa fitur dengan skala besar tidak mendominasi cara model belajar, yang bisa mempengaruhi performa model secara negatif. Dengan scaling, kita juga memastikan bahwa algoritma yang sensitif terhadap skala fitur, seperti algoritma berbasis gradien, beroperasi dengan lebih efisien.
 
-5. **Feature Engineering**:
+4. **Feature Engineering**:
     - Membuat fitur baru, seperti 'Age of House' yang dihitung dari selisih tahun saat ini dengan tahun dibangunnya rumah (`Current Year - YearBuilt`).
     - Alasan: Fitur baru seringkali dapat memberikan wawasan tambahan yang tidak tersedia secara langsung dari data yang ada. Dalam kasus ini, usia rumah bisa sangat relevan dengan harga pasar.
+
+5. **Splitting Data**: Data dibagi menjadi dua set, yaitu training set dan testing set. Proporsi pembagian adalah 80% untuk training dan 20% untuk testing. Splitting ini penting untuk memvalidasi model pada data yang tidak terlibat dalam proses training, yang membantu dalam menilai kemampuan generalisasi model.
+
 
 ### Alasan Keseluruhan untuk Data Preparation
 Setiap langkah dalam data preparation didesain untuk mengatasi masalah khusus dalam data atau untuk membuat data lebih amenable untuk modeling. Dengan melakukan imputasi, encoding, scaling, dan engineering, kami meminimalkan risiko overfitting, mempermudah model untuk belajar dari data, dan meningkatkan kemungkinan mendapatkan prediksi yang akurat.
