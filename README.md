@@ -13,8 +13,10 @@ Masalah prediksi harga rumah harus diselesaikan karena:
 3. **Efisiensi Pasar**: Meminimalkan ketidakefisienan dalam pasar properti dengan menyediakan data yang akurat dan transparan.
 
 ### Referensi
-- **"[House Price Prediction Using Machine Learning Algorithms](https://doi.org/10.1007/978-981-13-1936-5_45)"**
-- **"[An Overview of Real Estate Modelling Techniques for House Price Prediction](https://doi.org/10.1007/978-981-15-3859-9_28)"**
+1. "[House Price Prediction Using Machine Learning Algorithms](https://doi.org/10.1007/978-981-13-1936-5_45)" 
+    - Menyediakan wawasan tentang penggunaan berbagai algoritma dalam prediksi harga rumah.
+2. "[An Overview of Real Estate Modelling Techniques for House Price Prediction](https://doi.org/10.1007/978-981-15-3859-9_28)" 
+    - Menjelaskan teknik pemodelan yang berbeda dan bagaimana mereka diterapkan dalam konteks real estat.
 
 ## Business Understanding
 
